@@ -1,8 +1,9 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
+
 class ModelTests(TestCase):
-    
+
     def test_create_user_with_email_succesful(self):
         """Test creating a new user with an email is succesful"""
         email = 'teste@gmail.com'
@@ -36,7 +37,6 @@ class ModelTests(TestCase):
             email='teste@gmail.com',
             password='password'
         )
-        
+
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
-
